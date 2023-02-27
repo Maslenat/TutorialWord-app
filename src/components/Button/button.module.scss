@@ -1,0 +1,28 @@
+@import "../../style/style.scss";
+
+.button {
+    border: 0;
+    width: 50px;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    margin: 3px;
+    background-color: $color-primary-2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &:hover {
+
+        @include hoverbut;
+
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}

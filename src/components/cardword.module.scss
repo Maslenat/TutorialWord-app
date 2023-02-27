@@ -1,0 +1,7 @@
+@import "../style/style";
+
+
+.cardword {
+  @include font($weight-bold, $font-48, $color-primary-2);   
+
+}
