@@ -1,11 +1,12 @@
 import Table from "./components/Table/Table";
-import Card from "./components/Card/Card";
+import Game from "./components/Game/Game";
 function App() {
 
   return (
     <div>
-      <Card />
       <Table />
+      <Game />
+
 
     </div>
   );
