@@ -2,7 +2,10 @@ import style from "./table.module.scss";
 import TableRow from "./TableRow";
 import words from "../../words.json"
 
+
 function Table() {
+
+
     return (
 
         <table className={style.table}>
@@ -19,11 +22,12 @@ function Table() {
             <tbody>
 
                 {words.map((word) => (
-                    <TableRow isSelect={false} eng={word.english} rus={word.russian} trans={word.transcription} tag={word.tags} />
+                    <TableRow word={word} key={word.id} />
                 ))}
             </tbody>
 
         </table>
+
 
     );
 }

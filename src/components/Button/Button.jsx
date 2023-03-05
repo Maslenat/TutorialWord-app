@@ -13,12 +13,18 @@ const save = <FontAwesomeIcon icon={faCheck} />;
 const del = <FontAwesomeIcon icon={faTrash} />;
 const cancel = <FontAwesomeIcon icon={faXmark} />;
 
-function Button({ isSave }) {
+function Button({ isSave, setEdit }) {
+
+    function edt() {
+
+        setEdit(!isSave);
+    }
+
     return (
 
         <div className={style.wrapper}>
             {isSave ?
-                (<>< button className={style.button}>
+                (<>< button className={style.button} onClick={edt}>
                     {edit}
                 </button >
                     < button className={style.button}>
@@ -27,7 +33,7 @@ function Button({ isSave }) {
                 </>) : (<>< button className={style.button}>
                     {save}
                 </button >
-                    < button className={style.button}>
+                    < button className={style.button} onClick={edt}>
                         {cancel}
                     </button ></>)
 
