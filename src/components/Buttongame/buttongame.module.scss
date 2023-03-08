@@ -1,0 +1,42 @@
+@import "../../style/style.scss";
+
+.wrapper {
+    width: 100px;
+    height: 100px;
+    /*    background-color: white;
+    border-radius: 45%; */
+
+
+}
+
+.button {
+    border: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 45%;
+    color: $color-primary-2;
+    margin: 3px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &:hover {
+
+        @include hoverbut;
+
+    }
+
+    svg {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}

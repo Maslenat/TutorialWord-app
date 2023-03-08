@@ -1,0 +1,26 @@
+[
+    {
+        "id": "13289",
+        "english": "lilac",
+        "transcription": "[ˈlaɪlək]",
+        "russian": "сирень",
+        "tags": "растения",
+        "tags_json": "[\"u0440u0430u0441u0442u0435u043du0438u044f\"]"
+    },
+    {
+        "id": "13316",
+        "english": "orange",
+        "transcription": "[ˈɔːrɪndʒ]",
+        "russian": "апельсин",
+        "tags": "",
+        "tags_json": "[\"\"]"
+    },
+    {
+        "id": "13334",
+        "english": "stop",
+        "transcription": "stv:p",
+        "russian": "остановкав",
+        "tags": "",
+        "tags_json": "[\"\"]"
+    }
+]

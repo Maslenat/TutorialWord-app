@@ -2,17 +2,17 @@
 
 
 .container {
-  margin: 10px auto;
+  //margin: 10px auto;
   width: 300px;
   height: 450px;
   border: 2px solid $color-primary-5;
   border-radius: 5px;
   background-color: $color-primary-3;
-  position: absolute;
+  //position: absolute;
   
     &_none {
   
-      margin: 10px auto;
+    // margin: 10px auto;
       width: 300px;
       height: 450px;
       border: 2px solid $color-primary-5;
@@ -26,10 +26,10 @@
       animation-fill-mode: forwards;
       animation-delay: 1500ms;
   
-      position: absolute;
-      top: 0;
+      /* position: absolute;
+                              top: 0; */
   
-      @keyframes open {
+    @keyframes open {
         0% {
   
           opacity: 1;
@@ -45,7 +45,8 @@
         }
   
   
-      }
+                        }
+      
   
     }
 

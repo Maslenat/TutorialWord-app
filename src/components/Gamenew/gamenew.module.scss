@@ -1,0 +1,12 @@
+@import "../../style/style.scss";
+
+.wrapper {
+    text-align: center;
+    width: 100%;
+    background-color: $color-primary-4 ;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
