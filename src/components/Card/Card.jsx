@@ -5,6 +5,7 @@ export default function Card(props) {
     const { english, transcription, russian } = props.word;
     const { change, setChange } = props;
 
+
     function onChan() {
         setChange(false);
     }

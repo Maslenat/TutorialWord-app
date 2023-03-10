@@ -4,12 +4,14 @@ import words from "./words.json";
 import Gameneww from "./components/Gamenew/Gamenew";
 import "./app.css";
 
+
+
 function App() {
 
   return (
     <div>
 
-      <Gameneww words={words} />
+      <Gameneww word={words} />
 
     </div>
   );
