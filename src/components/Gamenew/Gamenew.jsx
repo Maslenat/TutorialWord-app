@@ -5,21 +5,32 @@ import Buttongame from "../Buttongame/Buttongame";
 import style from "./gamenew.module.scss";
 import React from "react";
 
-export default function Gameneww(word) {
+Gameneww.defaultProps = {
+    words: massiv,
+    lastIndex: Number(massiv.length - 1)
+};
+
+
+function Gameneww(props) {
+
 
     const [ind, setIndex] = useState(0);
     const [change, setChange] = useState(true);
 
-    Gameneww.defaultProps = { word: massiv };
 
-    const lastIndex = Number(word.length - 1);
+
+    const { words } = props;
+
+    const lastIndex = Number(words.length - 1);
 
 
 
     return (
         <div className={style.wrapper}>
+
             <Buttongame ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
-            <Card word={word[ind]} change={change} setChange={setChange} />
+
+            <Card word={words[ind]} change={change} setChange={setChange} />
             <Buttongame arrow={'true'} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
 
         </div>
@@ -29,4 +40,4 @@ export default function Gameneww(word) {
 }
 
 
-
+export default Gameneww;

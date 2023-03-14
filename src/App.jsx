@@ -10,11 +10,13 @@ function App() {
 
   return (
     <div>
+      {words.length > 0 ? <Gameneww words={words} /> : <Gameneww />}
 
-      <Gameneww word={words} />
+
 
     </div>
   );
 }
+
 
 export default App;
