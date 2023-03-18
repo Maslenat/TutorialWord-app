@@ -5,7 +5,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons';
 import style from "./buttongame.module.scss";
-import { click } from '@testing-library/user-event/dist/click';
+
 
 
 const arrowright = <FontAwesomeIcon icon={faCircleArrowRight} />;
@@ -22,14 +22,21 @@ export default function Buttongame(props) {
     const Clickright = () => {
 
         let count = ind === lastIndex ? 0 : ind + 1;
-        setIndex(count);
+
+
+        // Симулируем задержку кода
+        setTimeout(function () {
+            setIndex(count);
+        }, 1000);
+
     }
 
     const Clickleft = () => {
 
         let count = ind === 0 ? lastIndex : ind - 1;
-
-        setIndex(count);
+        setTimeout(function () {
+            setIndex(count);
+        }, 1000);
     }
 
     const Change = () => {
@@ -50,11 +57,12 @@ export default function Buttongame(props) {
     return (
 
 
-        <div className={style.wrapper}>
+        <div className={style.wrapper} >
+            {console.log("Кнопка")}
             {arrow ?
-                (< button className={style.button} onClick={UpdateR} >
+                (< button id="btnR" className={style.button} onClick={UpdateR} >
                     {arrowright}
-                </button >) : (< button className={style.button} onClick={UpdateL}> {arrowleft} </button >)
+                </button >) : (< button id="btnL" className={style.button} onClick={UpdateL}> {arrowleft} </button >)
 
             }
 

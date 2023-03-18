@@ -2,62 +2,16 @@
 
 
 .container {
-  //margin: 10px auto;
+
   width: 300px;
-  height: 450px;
-  border: 2px solid $color-primary-5;
-  border-radius: 5px;
-  background-color: $color-primary-3;
-  //position: absolute;
-  
-    &_none {
-  
-    // margin: 10px auto;
-      width: 300px;
-      height: 450px;
-      border: 2px solid $color-primary-5;
-      border-radius: 5px;
-      background-color: $color-primary-3;
-  
-      animation-name: open;
-      animation-duration: 1s;
-      animation-iteration-count: 1;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-delay: 1500ms;
-  
-      /* position: absolute;
-                              top: 0; */
-  
-    @keyframes open {
-        0% {
-  
-          opacity: 1;
-          visibility: visible;
-        }
-  
-        100% {
-  
-          opacity: 0;
-          visibility: hidden;
-          transform: rotateY(90deg);
-  
-        }
-  
-  
-                        }
-      
-  
-    }
-
-
-  &__out {
+    height: 450px;
+    border: 2px solid $color-primary-5;
+    border-radius: 5px;
+    background-color: $color-primary-3;
+&__out {
     width: 100%;
     height: 70%;
     position: relative;
-
-
-
   }
 
   &__inner {
@@ -68,32 +22,15 @@
     bottom: 0;
     margin: auto 0;
     text-align: center;
-
   }
 
   &__trans {
     width: 100%;
     height: 30%;
-
-
-
   }
 
-}
-
-.word {
-  @include font($weight-bold, $font-32, $color-black);
-  letter-spacing: 3px;
 
 }
-
-.transcription {
-  @include font($weight-normal, $font-24, $color-primary-5);
-  letter-spacing: 2px;
-
-
-}
-
 .button {
   padding: 15px 30px;
   @include font($weight-bold, $font-16, $color-primary-3);
@@ -110,11 +47,76 @@
   }
 
 }
+.word {
+  @include font($weight-bold, $font-32, $color-black);
+  letter-spacing: 3px;
 
+}
+
+.transcription {
+  @include font($weight-normal, $font-24, $color-primary-5);
+  letter-spacing: 2px;
+
+}
 .rusword {
   @include font($weight-bold, $font-24, $color-primary-2);
   letter-spacing: 2px;
   margin-top: 30px;
   text-align: center;
+}
 
+.animationR {
+  width: 300px;
+  height: 450px;
+  border: 2px solid $color-primary-5;
+  border-radius: 5px;
+  background-color: $color-primary-3;
+  animation-name: right;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms;
+
+  @keyframes right {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    100% {
+      opacity: 0;
+      visibility: visible;
+      transform: rotateY(90deg);
+
+
+    }
+  }
+}
+
+.animationL {
+  width: 300px;
+  height: 450px;
+  border: 2px solid $color-primary-5;
+  border-radius: 5px;
+  background-color: $color-primary-3;
+  animation-name: left;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms;
+
+  @keyframes left {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+
+        100% {
+          opacity: 0;
+          visibility: hidden;
+          transform: rotateY(-90deg);
+        }
+        }
 }

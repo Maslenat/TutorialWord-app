@@ -5,17 +5,18 @@ import Buttongame from "../Buttongame/Buttongame";
 import style from "./gamenew.module.scss";
 import React from "react";
 
+
 Gameneww.defaultProps = {
     words: massiv,
     lastIndex: Number(massiv.length - 1)
 };
-
 
 function Gameneww(props) {
 
 
     const [ind, setIndex] = useState(0);
     const [change, setChange] = useState(true);
+
 
 
 
@@ -26,11 +27,11 @@ function Gameneww(props) {
 
 
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper}  >
 
             <Buttongame ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
 
-            <Card word={words[ind]} change={change} setChange={setChange} />
+            <Card word={words[ind]} change={change} setChange={setChange} key={ind} />
             <Buttongame arrow={'true'} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
 
         </div>
