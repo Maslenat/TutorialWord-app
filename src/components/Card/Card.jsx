@@ -17,11 +17,11 @@ export default function Card(props) {
     useEffect(() => {
 
         document.getElementById("btnR").addEventListener('click', () => { document.getElementById('card').className = style.animationR })
-
+        document.getElementById("btnL").addEventListener('click', () => { document.getElementById('card').className = style.animationL })
 
         return () => {
             document.getElementById("btnR").removeEventListener('click', () => { document.getElementById('card').className = style.animationR })
-
+            document.getElementById("btnL").removeEventListener('click', () => { document.getElementById('card').className = style.animationL })
         }
 
 

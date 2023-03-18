@@ -40,8 +40,10 @@ export default function Buttongame(props) {
     }
 
     const Change = () => {
+        setTimeout(function () {
+            setChange(true);
+        }, 1000);
 
-        setChange(true);
 
     }
     function UpdateR() {
