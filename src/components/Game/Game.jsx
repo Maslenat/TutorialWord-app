@@ -7,9 +7,7 @@ export default function Game() {
     return (
         <div className={style.container}>
 
-            {words.map((word) => (
-                <Card word={word} key={word.id} />
-            ))}
+            {words.map((word) => <Card {...word} key={word.id} />)}
 
 
         </div>

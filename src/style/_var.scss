@@ -10,10 +10,11 @@
 
 
  $family: 'Roboto', sans-serif;
-
+$familyLat: 'Lateef', serif;
  $weight-normal: 400;
  $weight-bold: 700;
 
+ $font-96: 96px;
  $font-48: 48px;
  $font-32: 32px;
  $font-24: 24px;
@@ -24,7 +25,7 @@
  @mixin font($weight, $size, $color) {
    font-weight: $weight;
    font-size: $size;
-   font-family: $family;
+  font-family: $familyLat;
    color: $color;
  }
 

@@ -1,1 +1,44 @@
-@import "../style/style.scss";
+@import "../../style/style.scss";
+
+.nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    filter: opacity(95%);
+    background: url('../../img/background.jpg');
+    background-size: 100%;
+
+    &__wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+
+    }
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    @include font($weight-bold, $font-24, $color-primary-2);
+    transition: color .2s;
+    cursor: pointer;
+}

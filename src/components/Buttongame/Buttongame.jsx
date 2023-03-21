@@ -1,23 +1,23 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleArrowRight,
     faCircleArrowLeft
 
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'; */
 import style from "./buttongame.module.scss";
 
-
-
+import arrowR from "../../img/arrowR.svg";
+import arrowL from "../../img/arrowL.svg";
+/* 
 const arrowright = <FontAwesomeIcon icon={faCircleArrowRight} />;
-const arrowleft = <FontAwesomeIcon icon={faCircleArrowLeft} />;
+const arrowleft = <FontAwesomeIcon icon={faCircleArrowLeft} />; */
 
 
 export default function Buttongame(props) {
 
 
     const { setChange, arrow, ind, setIndex, lastIndex } = props;
-    console.log(lastIndex);
-    console.log(ind);
+
 
     const Clickright = () => {
 
@@ -27,7 +27,7 @@ export default function Buttongame(props) {
         // Симулируем задержку кода
         setTimeout(function () {
             setIndex(count);
-        }, 1000);
+        }, 600);
 
     }
 
@@ -36,13 +36,13 @@ export default function Buttongame(props) {
         let count = ind === 0 ? lastIndex : ind - 1;
         setTimeout(function () {
             setIndex(count);
-        }, 1000);
+        }, 600);
     }
 
     const Change = () => {
         setTimeout(function () {
             setChange(true);
-        }, 1000);
+        }, 600);
 
 
     }
@@ -54,17 +54,17 @@ export default function Buttongame(props) {
         Change();
         Clickleft();
     }
-
+    console.log("BUTTON");
 
     return (
 
 
         <div className={style.wrapper} >
-            {console.log("Кнопка")}
+
             {arrow ?
                 (< button id="btnR" className={style.button} onClick={UpdateR} >
-                    {arrowright}
-                </button >) : (< button id="btnL" className={style.button} onClick={UpdateL}> {arrowleft} </button >)
+                    <img src={arrowR} alt="arrowright" />
+                </button >) : (< button id="btnL" className={style.button} onClick={UpdateL}> <img src={arrowL} alt="arrowleft" /> </button >)
 
             }
 

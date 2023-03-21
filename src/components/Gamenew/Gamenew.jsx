@@ -24,7 +24,7 @@ function Gameneww(props) {
 
     const lastIndex = Number(words.length - 1);
 
-
+    console.log("GAME NEWW- BUTTON-CARD")
 
     return (
         <div className={style.wrapper}  >

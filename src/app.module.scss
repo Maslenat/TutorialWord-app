@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background: url('./img/background.jpg') no-repeat;
+    background-size: cover;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+}
