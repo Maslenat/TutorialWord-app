@@ -13,7 +13,7 @@ const Header = () => (
     <header className={style.header} >
         {console.log("HEADER")}
         <div className={style.header__wrapper}>
-            <Link to="/main" className={style.logo}>
+            <Link to="/" className={style.logo}>
                 <img src={logo} alt='logo' />
             </Link>
             <nav className={style.nav} >

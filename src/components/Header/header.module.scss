@@ -34,11 +34,21 @@
 .logo {
     display: flex;
     align-items: center;
+    &:hover {
+            @include hoverbut;
+        }
+    
+        border-radius: 5px;
 }
 
 .link {
+    padding: 15px 60px;
     text-decoration: none;
+    border-radius: 5px;
     @include font($weight-bold, $font-24, $color-primary-2);
     transition: color .2s;
     cursor: pointer;
+    &:hover {
+            @include hoverbut;
+        }
 }

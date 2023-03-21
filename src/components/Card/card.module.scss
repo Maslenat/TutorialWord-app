@@ -11,6 +11,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    &:hover {
+        @include hoverbut;
+    
+      }
 &__out {
     width: 99%;
     height: 70%;

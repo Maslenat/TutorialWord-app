@@ -1,5 +1,10 @@
+@import "../../style/style.scss";
 .wrapper {
-    font-size: 50px;
-
+    @include font($weight-bold, $font-48, $color-primary-2);
+        height: 100vh;
     text-align: center;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
 }
