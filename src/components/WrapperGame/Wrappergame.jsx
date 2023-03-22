@@ -1,5 +1,5 @@
 import words from "../../words.json";
-import Gameneww from "../Gamenew/Gamenew";
+import Gameneww from "../../pages/PageGame/PageGame";
 
 
 

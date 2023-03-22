@@ -12,7 +12,8 @@ function TableRow(props) {
 
 
 
-    return (<>{edit ? (<><tr>
+    return (<>
+        {edit ? (<><tr>
         <td>{english}</td>
         <td>{transcription}</td>
         <td>{russian}</td>

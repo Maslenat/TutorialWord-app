@@ -3,7 +3,7 @@ import logo from '../../img/Logo.svg';
 
 import {
 
-    Link
+    NavLink
 } from "react-router-dom";
 
 
@@ -13,16 +13,16 @@ const Header = () => (
     <header className={style.header} >
         {console.log("HEADER")}
         <div className={style.header__wrapper}>
-            <Link to="/" className={style.logo}>
+            <NavLink to="/" className={style.logo}>
                 <img src={logo} alt='logo' />
-            </Link>
+            </NavLink>
             <nav className={style.nav} >
-                <Link to="/main" className={style.link}>
+                <NavLink to="/main" className={style.link}>
                     Main
-                </Link>
-                <Link to="/game" className={style.link}>
+                </NavLink>
+                <NavLink to="/game" className={style.link}>
                     Game
-                </Link>
+                </NavLink>
             </nav>
         </div>
 

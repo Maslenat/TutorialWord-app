@@ -1,17 +1,17 @@
 import { useState } from "react";
-import Card from "../Card/Card";
+import Card from "../../components/Card/Card";
 import massiv from "../../massiv.json";
-import Buttongame from "../Buttongame/Buttongame";
-import style from "./gamenew.module.scss";
+import Buttongame from "../../components/Buttongame/Buttongame";
+import style from "./style.module.scss";
 import React from "react";
 
 
-Gameneww.defaultProps = {
+PageGame.defaultProps = {
     words: massiv,
     lastIndex: Number(massiv.length - 1)
 };
 
-function Gameneww(props) {
+function PageGame(props) {
 
 
     const [ind, setIndex] = useState(0);
@@ -41,4 +41,4 @@ function Gameneww(props) {
 }
 
 
-export default Gameneww;
+export default PageGame;

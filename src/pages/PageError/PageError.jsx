@@ -1,11 +1,11 @@
 
-import style from "./nomatch.module.scss";
+import style from "./style.module.scss";
 
 
 
 
 
-const NoMatch = () => (
+const PageError = () => (
     <div className={style.wrapper}>
         <p>404</p>
         <p>страница не найдена  </p>
@@ -14,4 +14,4 @@ const NoMatch = () => (
     </div>
 );
 
-export default NoMatch;
+export default PageError;
