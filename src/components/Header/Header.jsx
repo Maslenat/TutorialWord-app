@@ -11,7 +11,7 @@ import {
 const Header = () => (
 
     <header className={style.header} >
-        {console.log("HEADER")}
+       
         <div className={style.header__wrapper}>
             <NavLink to="/" className={style.logo}>
                 <img src={logo} alt='logo' />

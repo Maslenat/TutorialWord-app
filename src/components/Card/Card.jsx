@@ -5,18 +5,22 @@ import "./card.module.scss";
 
 export default function Card(props) {
     const { english, transcription, russian } = props.word;
-    const { change, setChange } = props;
+    const { change, setChange,Counter } = props;
 
 
 
     function onChan() {
         setChange(false);
+       
     }
+function buttonClick(){
+    Counter();
+    onChan();
 
+}
 
     useEffect(() => {
         let btnR = document.getElementById("btnR");
-        console.log(btnR);
         let btnL = document.getElementById("btnL");
         btnR.addEventListener('click', () => { document.getElementById('card').className = style.animationR })
         btnL.addEventListener('click', () => { document.getElementById('card').className = style.animationL })
@@ -29,7 +33,7 @@ export default function Card(props) {
 
     }, [])
 
-    console.log("рендер карты");
+   
 
     return (
 
@@ -42,7 +46,7 @@ export default function Card(props) {
 
             </div>
             <div className={style.container__trans}>
-                {change === true ? <button className={style.button} onClick={onChan}>Проверить</button> : <div className={style.rusword}>{russian}</div>}
+                {change === true ? <button autoFocus className={style.button} onClick={buttonClick}>Проверить</button> : <div className={style.rusword}>{russian}</div>}
             </div>
 
         </div> 

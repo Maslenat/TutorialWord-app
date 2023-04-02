@@ -24,7 +24,7 @@ export default function Buttongame(props) {
         let count = ind === lastIndex ? 0 : ind + 1;
 
 
-        // Симулируем задержку кода
+        //  задержкa кода
         setTimeout(function () {
             setIndex(count);
         }, 600);
@@ -54,7 +54,7 @@ export default function Buttongame(props) {
         Change();
         Clickleft();
     }
-    console.log("BUTTON");
+
 
     return (
 
