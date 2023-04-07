@@ -46,9 +46,11 @@
   display: block;
   border: none;
 
-  &:hover {
+  &:hover,
+    &:focus {
     @include hoverbut;
     cursor: pointer;
+    border: none;
   }
 
 }
