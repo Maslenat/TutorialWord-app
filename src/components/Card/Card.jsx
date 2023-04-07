@@ -1,16 +1,19 @@
-import { useEffect,useRef } from "react";
+import { useEffect,forwardRef } from "react";
 import style from "./card.module.scss";
 
 import "./card.module.scss";
 
-export default function Card(props) {
+const Card = forwardRef((props, ref) => {
+
     const { english, transcription, russian } = props.word;
     const { change, setChange,Counter } = props;
 
-    const btnref=useRef();
+  
+
 
     function onChan() {
         setChange(false);
+      
        
     }
 function buttonClick(){
@@ -20,7 +23,7 @@ function buttonClick(){
 }
 
     useEffect(() => {
-        btnref.current.focus();
+       
         let btnR = document.getElementById("btnR");
         let btnL = document.getElementById("btnL");
         btnR.addEventListener('click', () => { document.getElementById('card').className = style.animationR })
@@ -47,10 +50,11 @@ function buttonClick(){
 
             </div>
             <div className={style.container__trans}>
-                {change === true ? <input  ref={btnref} onClick={buttonClick} type ="button" value="Проверить" className={style.button}/> : <div className={style.rusword}>{russian}</div>}
+                {change === true ? <input  ref={ref} onClick={buttonClick} type ="button" value="Проверить" className={style.button}/> : <div className={style.rusword}>{russian}</div>}
             </div>
 
         </div> 
     );
-}
+});
+export default Card;
 

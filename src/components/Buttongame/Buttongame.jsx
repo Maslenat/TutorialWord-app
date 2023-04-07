@@ -22,13 +22,9 @@ export default function Buttongame(props) {
     const Clickright = () => {
 
         let count = ind === lastIndex ? 0 : ind + 1;
-
-
-        //  задержкa кода
-        setTimeout(function () {
+       
             setIndex(count);
-        }, 600);
-
+      
     }
 
     const Clickleft = () => {
@@ -40,12 +36,8 @@ export default function Buttongame(props) {
     }
 
     const Change = () => {
-        setTimeout(function () {
-            setChange(true);
-        }, 600);
-
-
-    }
+       
+            setChange(true);}
     function UpdateR() {
         Change();
         Clickright();
