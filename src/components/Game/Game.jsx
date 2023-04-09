@@ -1,4 +1,4 @@
-import { useState,useRef,useEffect } from "react";
+import { useState } from "react";
 import Card from "../../components/Card/Card";
 import massiv from "../../massiv.json";
 import Buttongame from "../../components/Buttongame/Buttongame";
@@ -23,7 +23,7 @@ function Game(props) {
   const lastIndex = Number(words.length - 1);
 
   const newLearned=[...learned];
-  const ref=useRef();
+  
   
   
   const Counter=()=>{
@@ -31,14 +31,14 @@ if (!newLearned.includes(ind)) newLearned.push(ind);
 setLearned(newLearned);
    
    }
-   useEffect(() =>{ ref.current.focus()},[ind]);
+   
 
     return (
         <main className={style.main}>
         <div className={style.wrapper}  >
 
             <Buttongame ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
-            <Card word={words[ind]} change={change} setChange={setChange} key={ind} Counter={Counter} ref={ref} />
+            <Card word={words[ind]} change={change} setChange={setChange} key={ind} Counter={Counter}  />
           
             <Buttongame arrow={'true'} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
 

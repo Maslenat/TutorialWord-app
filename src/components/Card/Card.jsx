@@ -1,13 +1,13 @@
-import { forwardRef } from "react";
+import { useRef,useEffect } from "react";
 import style from "./card.module.scss";
 
 import "./card.module.scss";
 
-const Card = forwardRef((props, ref) => {
+const Card = (props)=> {
 
     const { english, transcription, russian } = props.word;
     const { change, setChange,Counter } = props;
-
+const ref=useRef();
   
 
 
@@ -22,7 +22,7 @@ function buttonClick(){
 
 }
 
-  
+useEffect(() =>{ ref.current.focus()},[props.word]);
 
     return (
 
@@ -40,6 +40,6 @@ function buttonClick(){
 
         </div> 
     );
-});
+};
 export default Card;
 
