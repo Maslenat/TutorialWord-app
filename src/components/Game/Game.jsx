@@ -31,7 +31,7 @@ if (!newLearned.includes(ind)) newLearned.push(ind);
 setLearned(newLearned);
    
    }
-   useEffect(() =>{if (ind!==0) ref.current.focus()},[ind]);
+   useEffect(() =>{ ref.current.focus()},[ind]);
 
     return (
         <main className={style.main}>

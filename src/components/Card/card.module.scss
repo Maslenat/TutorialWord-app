@@ -98,36 +98,24 @@
       &__trans {
         width: 100%;
         height: 30%;
-      }
-  animation-name: right;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                animation-duration: 400ms;
-    animation-timing-function: linear;
-      animation-delay: 0;
+        }
+        animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-direction: normal;
     animation-fill-mode: forwards;
 
-    position: relative;
-      right: -5px;
+                position: relative;
     @keyframes right {
-            100% {
-                opacity: 0;
-                right: -200px;
-                }
-                }
-                }
+        100% {
+            opacity: 0;
+              right: 200px;
+                visibility: hidden;
+              }
+              }
+              }
 
 .animationL {
-  width: 700px;
-    min-height: 350px;
-    border: 2px solid $color-primary-3;
-    border-radius: 134px;
-  background-color: $color-primary-3;
-  display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  
-    &__out {
+  &__out {
       width: 99%;
       height: 70%;
       position: relative;
@@ -137,28 +125,22 @@
       justify-content: center;
       align-items: center;
     }
-  
-  
     &__trans {
       width: 100%;
       height: 30%;
     }
-  animation-name: left;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                animation-duration: 400ms;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-delay: 0ms;
-  position: relative;
-    right: 5px;
-  @keyframes left {
-  
-        100% {
-          opacity: 0;
-          right: 200px;
-          }
-          }
-  
+width: 700px;
+min-height: 350px;
+border: 2px solid $color-primary-3;
+border-radius: 134px;
+background-color: $color-primary-3;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+animation-iteration-count: 1;
+animation-timing-function: linear;
+animation-direction: normal;
+animation-fill-mode: forwards;
+animation-delay: 0ms;
+position: relative;
 }
-

@@ -30,9 +30,8 @@ export default function Buttongame(props) {
     const Clickleft = () => {
 
         let count = ind === 0 ? lastIndex : ind - 1;
-        setTimeout(function () {
             setIndex(count);
-        }, 600);
+   
     }
 
     const Change = () => {

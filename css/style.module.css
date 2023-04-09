@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lateef", serif;
+  src: url("../fonts/Lateef-Regular.ttf");
+}
+.wrapper {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}/*# sourceMappingURL=style.module.css.map */y-content: center;
+  width: 50%;
+}/*# sourceMappingURL=style.module.css.map */round;
+  gap: 40px;
+}
+
+p {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Lateef", serif;
+  color: #235267;
+}/*# sourceMappingURL=style.module.css.map */

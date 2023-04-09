@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lateef", serif;
+  src: url("../fonts/Lateef-Regular.ttf");
+}
+.nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  filter: opacity(95%);
+  background: url("../../img/background.jpg");
+  background-size: 100%;
+}
+.header__wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.logo:hover {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  filter: brightness(80%);
+  transition: all 0.3s;
+}
+
+.link {
+  padding: 15px 60px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Lateef", serif;
+  color: #235267;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.link:hover {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  filter: brightness(80%);
+  transition: all 0.3s;
+}/*# sourceMappingURL=header.module.css.map */

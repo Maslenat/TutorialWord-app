@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lateef", serif;
+  src: url("../fonts/Lateef-Regular.ttf");
+}
+.button {
+  border: 0;
+  width: 200px;
+  height: 200px;
+  margin: 3px;
+  background: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  filter: brightness(80%);
+  transition: all 0.3s;
+}
+.button img {
+  max-width: 100%;
+}
+.button img svg {
+  color: #235267;
+}/*# sourceMappingURL=buttongame.module.css.map */

@@ -1,4 +1,4 @@
-import { useEffect,forwardRef } from "react";
+import { forwardRef } from "react";
 import style from "./card.module.scss";
 
 import "./card.module.scss";
@@ -22,27 +22,12 @@ function buttonClick(){
 
 }
 
-    useEffect(() => {
-       
-        let btnR = document.getElementById("btnR");
-        let btnL = document.getElementById("btnL");
-        btnR.addEventListener('click', () => { document.getElementById('card').className = style.animationR })
-        btnL.addEventListener('click', () => { document.getElementById('card').className = style.animationL })
-
-        return () => {
-            btnR.removeEventListener('click', () => { document.getElementById('card').className = style.animationR })
-            btnL.removeEventListener('click', () => { document.getElementById('card').className = style.animationL })
-        }
-
-
-    }, [])
-
-   
+  
 
     return (
 
         <div id={'card'} className={style.container}   >
-
+           
             <div className={style.container__out}>
                 <div className={style.word}>{english}</div>
                 <div className={style.transcription}>{transcription}</div>
