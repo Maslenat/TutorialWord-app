@@ -16,7 +16,7 @@ const arrowleft = <FontAwesomeIcon icon={faCircleArrowLeft} />; */
 export default function Buttongame(props) {
 
 
-    const { setChange, arrow, ind, setIndex, lastIndex } = props;
+    const { setChange, arrow, ind, setIndex, lastIndex, setAnime } = props;
 
 
     const Clickright = () => {
@@ -24,15 +24,15 @@ export default function Buttongame(props) {
         let count = ind === lastIndex ? 0 : ind + 1;
        
             setIndex(count);
+            setAnime("right");
       
     }
 
     const Clickleft = () => {
-
         let count = ind === 0 ? lastIndex : ind - 1;
             setIndex(count);
-   
-    }
+            setAnime("left");
+       }
 
     const Change = () => {
        

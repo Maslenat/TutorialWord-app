@@ -2,7 +2,7 @@
 
 
 .container {
-
+  transform: translateX(0px);
   width: 700px;
     min-height: 350px;
     border: 2px solid $color-primary-3;
@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
     &:hover {
         @include hoverbut;
     
@@ -73,74 +74,10 @@
   text-align: center;
 }
 
-.animationR {
-  width: 700px;
-    min-height: 350px;
-    border: 2px solid $color-primary-3;
-    border-radius: 134px;
-    background-color: $color-primary-3;
-    display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    
-      &__out {
-        width: 99%;
-        height: 70%;
-        position: relative;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    
-    
-      &__trans {
-        width: 100%;
-        height: 30%;
-        }
-        animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-    animation-fill-mode: forwards;
 
-                position: relative;
-    @keyframes right {
-        100% {
-            opacity: 0;
-              right: 200px;
-                visibility: hidden;
-              }
-              }
-              }
-
-.animationL {
-  &__out {
-      width: 99%;
-      height: 70%;
-      position: relative;
-  
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    &__trans {
-      width: 100%;
-      height: 30%;
-    }
-width: 700px;
-min-height: 350px;
-border: 2px solid $color-primary-3;
-border-radius: 134px;
-background-color: $color-primary-3;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-animation-iteration-count: 1;
-animation-timing-function: linear;
-animation-direction: normal;
-animation-fill-mode: forwards;
-animation-delay: 0ms;
-position: relative;
+.animright {
+  @include right;
+}
+.animleft {
+  @include left;
 }

@@ -41,3 +41,37 @@ $familyLat: 'Lateef', serif;
    filter: brightness(80%);
   transition: all 0.3s;
  }
+@mixin left {
+  animation: left 1000ms 1 none;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+}
+
+
+@mixin right {
+  animation: right 1000ms 1 none;
+}
+
+@keyframes right {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+}

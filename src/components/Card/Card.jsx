@@ -1,45 +1,47 @@
-import { useRef,useEffect } from "react";
+
 import style from "./card.module.scss";
 
 import "./card.module.scss";
+import { useRef,useEffect } from "react";
 
-const Card = (props)=> {
-
-    const { english, transcription, russian } = props.word;
-    const { change, setChange,Counter } = props;
-const ref=useRef();
-  
-
+const Card = ({word, change, setChange,Counter,anime}) => {
 
     function onChan() {
         setChange(false);
-      
-       
     }
-function buttonClick(){
+  
+    function buttonClick(){
     Counter();
     onChan();
+    }
+const ref=useRef();
 
-}
+   let stlCont;
 
-useEffect(() =>{ ref.current.focus()},[props.word]);
+   if (anime==="right") {stlCont=`${style.container} ${style.animright}`}
+     else if(anime==="left") {stlCont=`${style.container} ${style.animleft}`}
+       else stlCont=`${style.container}`;
+       
+    useEffect(()=>{if (anime!=="none") ref.current.focus()},[anime])
+
 
     return (
-
-        <div id={'card'} className={style.container}   >
-           
+        
+        <div id={'card'} className={stlCont}>
+        
             <div className={style.container__out}>
-                <div className={style.word}>{english}</div>
-                <div className={style.transcription}>{transcription}</div>
+                <div className={style.word}>{word.english}</div>
+                <div className={style.transcription}>{word.transcription}</div>
 
 
             </div>
             <div className={style.container__trans}>
-                {change === true ? <input  ref={ref} onClick={buttonClick} type ="button" value="Проверить" className={style.button}/> : <div className={style.rusword}>{russian}</div>}
+                {change === true ? <input ref={ref} onClick={buttonClick} type ="button" value="Проверить" className={style.button}/> : <div className={style.rusword}>{word.russian}</div>}
             </div>
 
         </div> 
     );
-};
+}
+
 export default Card;
 

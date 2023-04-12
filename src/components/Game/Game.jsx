@@ -17,6 +17,7 @@ function Game(props) {
     const {words}=props;
     const [ind, setIndex] = useState(0);
     const [change, setChange] = useState(true);
+    const [anime, setAnime] = useState("none");
     
     const [learned, setLearned]=useState([]);
 
@@ -31,16 +32,16 @@ if (!newLearned.includes(ind)) newLearned.push(ind);
 setLearned(newLearned);
    
    }
-   
+ 
 
     return (
         <main className={style.main}>
         <div className={style.wrapper}  >
 
-            <Buttongame ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
-            <Card word={words[ind]} change={change} setChange={setChange} key={ind} Counter={Counter}  />
-          
-            <Buttongame arrow={'true'} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
+            <Buttongame setAnime={setAnime} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
+            <Card anime={anime}   newLear={learned.length} word={words[ind]} change={change} setChange={setChange} key={words[ind].id} Counter={Counter}  />
+         
+            <Buttongame setAnime={setAnime} arrow={'true'} ind={ind} setIndex={setIndex} setChange={setChange} lastIndex={lastIndex} />
 
         </div>
         <p>выучено <span>{learned.length}</span></p>
