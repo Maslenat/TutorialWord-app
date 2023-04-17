@@ -22,7 +22,7 @@ const ref=useRef();
      else if(anime==="left") {stlCont=`${style.container} ${style.animleft}`}
        else stlCont=`${style.container}`;
        
-    useEffect(()=>{if (anime!=="none") ref.current.focus()},[anime])
+    useEffect(()=>{if (anime!=="none") ref.current.focus()},[])
 
 
     return (

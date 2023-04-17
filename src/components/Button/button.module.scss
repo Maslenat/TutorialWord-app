@@ -1,6 +1,10 @@
 @import "../../style/style.scss";
 
 .button {
+    &:hover {
+    
+            @include hoverbut;
+        }
     border: 0;
     width: 50px;
     height: 45px;
@@ -15,12 +19,11 @@
 
 
 
-    &:hover {
-
-        @include hoverbut;
-
+                &:disabled {
+                    @include disabledbtn;
     }
 }
+
 
 .wrapper {
     display: flex;

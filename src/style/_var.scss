@@ -41,6 +41,11 @@ $familyLat: 'Lateef', serif;
    filter: brightness(80%);
   transition: all 0.3s;
  }
+    @mixin disabledbtn {
+      box-shadow: none;
+      cursor: pointer;
+      background-color: $color-primary-1;
+    }
 @mixin left {
   animation: left 1000ms 1 none;
 }

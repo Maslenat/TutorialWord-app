@@ -13,10 +13,14 @@ const save = <FontAwesomeIcon icon={faCheck} />;
 const del = <FontAwesomeIcon icon={faTrash} />;
 const cancel = <FontAwesomeIcon icon={faXmark} />;
 
-function Button({ isSave, setEdit }) {
+function Button({ isSave, setEdit,block,getInput }) {
 
+    function saveInput() {
+        getInput();
+        setEdit(!isSave);
+    }
     function edt() {
-
+        
         setEdit(!isSave);
     }
 
@@ -30,10 +34,10 @@ function Button({ isSave, setEdit }) {
                     < button className={style.button}>
                         {del}
                     </button >
-                </>) : (<>< button className={style.button}>
+                </>) : (<>< button className={style.button} disabled={block} onClick={saveInput} >
                     {save}
                 </button >
-                    < button className={style.button} onClick={edt}>
+                    < button className={style.button} disabled={block} onClick={edt}>
                         {cancel}
                     </button ></>)
 
