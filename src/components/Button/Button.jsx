@@ -16,8 +16,8 @@ const cancel = <FontAwesomeIcon icon={faXmark} />;
 function Button({ isSave, setEdit,block,getInput }) {
 
     function saveInput() {
-        getInput();
-        setEdit(!isSave);
+        if (getInput()) setEdit(!isSave);
+        
     }
     function edt() {
         

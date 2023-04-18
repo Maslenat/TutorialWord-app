@@ -21,15 +21,17 @@ function TableRow(props) {
         const name =e.target.name;
         const value=e.target.value;
         newState[name]=value;
-        if (value==="") e.target.className=style.input_error;
+       value===""? e.target.className=style.input_error:e.target.className=style.input;
+
         setState(newState);
     }
-    const regExp  = /^\s*[а-яё]+(?:\s+[а-яё]+){1,3}\s*$/i;
-    
+    const regExp  = /[а-яё]/i;
+
         function getInput () {
         const value={...state};
         
-            if (regExp.test(value.rus)) setValue(value);else alert("Введите перевод кириллицей и не больше 4-ёх слов")
+            if (regExp.test(value.rus)) {setValue(value); return true}
+            else {alert("Введите перевод кириллицей"); return false};
     
    }
   
