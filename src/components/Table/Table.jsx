@@ -2,12 +2,14 @@ import style from "./table.module.scss";
 import TableRow from "./TableRow";
 import words from "../../words.json"
 import Thead from "./Thead";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { wordContext } from "../Mycontext/Mycontext";
 
 function Table() {
-const [value, setValue]=useState({});
-console.log(value);
-
+const [value, setValue] = useState({});
+const {word,setWord} = useContext(wordContext);
+console.log(word);
+console.log (setWord);
 
 
     return (
