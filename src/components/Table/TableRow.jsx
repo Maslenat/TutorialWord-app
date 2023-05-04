@@ -1,46 +1,63 @@
-
 import Button from "../Button/Button";
 import style from "./table.module.scss";
-import { useState } from "react";
-
-
+import {   useEffect, useState } from "react";
+import { useContext } from 'react'; 
+import { wordContext } from "../Mycontext/Mycontext";
+import {changeWord, isEmpty,checkValid} from "../../js/toolsforword";
+import { updateWords } from "../../Services/POST";
 
 function TableRow(props) {
-
-    const { english, transcription, russian, tags,id } = props.word;
+    const {words, setWords}=useContext(wordContext);
+    const { english, transcription , russian, tags, id } = props.word;
     const [edit, setEdit] = useState(true);
-    const [state,setState]=useState({eng:english, tran:transcription, rus:russian, tags:tags,id:id});
-    const {setValue}=props;
-  
-   
-    let block = false;
+    const [state,setState]=useState();
+    const [active, setActive]=useState(false);
+    const inputword={ english:english, transcription:transcription, russian:russian, tags:tags, id:id };
+    const [error, setError]=useState({english:"",russian:""});
     
+    useEffect(()=>{setState(inputword)},[]);
+
+
     function handleChange(e) {
         
-        const newState={...state}
-        const name =e.target.name;
-        const value=e.target.value;
-        newState[name]=value;
-       value===""? e.target.className=style.input_error:e.target.className=style.input;
+      const newState={...state}
+      const name =e.target.name;
+      const value=e.target.value;
+      newState[name]=value;
 
-        setState(newState);
+      if (value===""){
+        e.target.className=style.input_error;
+        setActive(true)} else { 
+           e.target.className=style.input;
+           setActive(false);
+           }
+
+      setState(newState);
     }
-    const regExp  = /[а-яё]/i;
 
-        function getInput () {
-        const value={...state};
-        
-            if (regExp.test(value.rus)) {setValue(value); return true}
-            else {alert("Введите перевод кириллицей"); return false};
-    
-   }
+    function noEdit() {
+     setState(inputword);
+        }    
+
+
+
+ 
   
-  
-    for (let key in state) {
-        
-        if(state[key] === "")
-        block =true;
-      }
+function saveWord  () {
+  const word={...state}
+ /*  let newwords=[...words]; */
+  const error=checkValid(word);
+      
+  if ( !isEmpty(error) ) {
+    setError(error); return false;
+    }else{
+      updateWords(word); 
+       return true;
+    }
+}
+
+   
+
 
 
     return (<>
@@ -49,14 +66,16 @@ function TableRow(props) {
         <td>{transcription}</td>
         <td>{russian}</td>
         <td>{tags}</td>
-        <td><Button isSave={edit} setEdit={setEdit} /></td></tr ></>) :
+        <td><Button isSave={edit} setEdit={setEdit}  id={id} /></td></tr ></>) :
         (<><tr className={style.rowinput}>
-            <td><div>{english}</div><input className={style.input}   type="text" name="eng"  value={state.eng} onChange={handleChange}/></td>
-            <td><div>{transcription}</div><input className={style.input} type="text" name="tran" value={state.tran} onChange={handleChange} /></td>
-            <td><div>{russian}</div><input className={style.input}  type="text" name="rus"  value={state.rus} onChange={handleChange} /></td>
+            <td><div>{english}</div><input className={style.input}  type="text" name="english"  value={state.english} onChange={handleChange}/><div className={style.error}>{error['english']}</div>
+           </td>
+            <td><div>{transcription}</div><input className={style.input} type="text" name="transcription"  value={state.transcription} onChange={handleChange} /></td>
+            <td><div>{russian}</div><input className={style.input}  type="text" name="russian"  value={state.russian} onChange={handleChange} /><div className={style.error}>{error['russian']}</div></td>
             <td><div>{tags}</div><input className={style.input}  type="text" name="tags"  value={state.tags} onChange={handleChange} /></td>
-            <td><Button getInput={getInput} block={block} isSave={edit} setEdit={setEdit} /></td></tr></>)}</>)
+            <td><Button  saveWord={saveWord}  active={active} isSave={edit} setEdit={setEdit} noEdit={noEdit} setState={setState} id={id} setError={setError} /></td></tr></>)}</>)
 }
+
 
 
 

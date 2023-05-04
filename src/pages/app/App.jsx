@@ -1,7 +1,7 @@
 
 import style from "./app.module.scss";
 import Header from "../../components/Header/Header";
-import { React } from "react";
+import { React, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,11 +14,9 @@ function App() {
 
   return (
     <div className={style.wrapper} >
-      <Router >
-        <Header />
-
-
-        <Routes>
+      <Router  >
+    <Header/>
+       <Routes>
           <Route path='/' index element={<PageHome />} />
           <Route path='/main' element={<PageTutorial />} />
           <Route path="/game" element={<PageGame />} />

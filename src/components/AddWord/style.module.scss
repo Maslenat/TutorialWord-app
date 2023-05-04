@@ -69,28 +69,16 @@ tbody tr:hover {
         outline: none;
         border: 3px solid $color-primary-1;
         border-radius: 5px;
-        background-color: $color-primary-7;
+        background-color: $color-primary-1;
 
     }
 
-    &_error {
-        border: 3px solid $color-primary-6;
-        margin: 5px;
-        padding: 3px;
-        text-align: center;
-        @include font($weight-bold, $font-20, $color-primary-5);
-        letter-spacing: 1px;
-        &:hover {
-                border: 1px solid $color-primary-5;
-                border-radius: 5px;
-            }
-        
-            &:focus {
-                outline: none;
-                border: 3px solid $color-primary-1;
-                border-radius: 5px;
-                background-color: $color-primary-7;
-        
-            }
-    }
+                                }
+                
+                                .error {
+                
+                                    text-align: center;
+            @include font($weight-normal, $font-16, $color-primary-6);
+                letter-spacing: 1px;
+
 }

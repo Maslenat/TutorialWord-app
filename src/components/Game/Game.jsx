@@ -1,9 +1,10 @@
-import { useState } from "react";
 import Card from "../../components/Card/Card";
 import massiv from "../../massiv.json";
 import Buttongame from "../../components/Buttongame/Buttongame";
 import style from "./style.module.scss";
 import React from "react";
+import { useState,useContext } from "react";
+import { wordContext } from "../Mycontext/Mycontext";
 
 
 
@@ -14,12 +15,13 @@ Game.defaultProps = {
 
 function Game(props) {
 
-    const {words}=props;
+   
     const [ind, setIndex] = useState(0);
     const [change, setChange] = useState(true);
     const [anime, setAnime] = useState("none");
     
     const [learned, setLearned]=useState([]);
+    const {words} = useContext(wordContext); 
 
   const lastIndex = Number(words.length - 1);
 

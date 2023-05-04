@@ -2,10 +2,10 @@
 
 .wrapper {
     @include font($weight-bold, $font-48, $color-primary-2);
-    height: 100vh;
+    gap: 50px;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    margin: auto 10px;
     justify-content: center;
-    width: 50%;
+
 }

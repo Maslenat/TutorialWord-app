@@ -46,6 +46,7 @@ $familyLat: 'Lateef', serif;
       cursor: pointer;
       background-color: $color-primary-1;
     }
+
 @mixin left {
   animation: left 1000ms 1 none;
 }
@@ -77,6 +78,41 @@ $familyLat: 'Lateef', serif;
   to {
     transform: translateX(0px);
     opacity: 1;
+
+  }
+}
+@mixin animationLoad {
+
+
+  animation: cubic 6000ms infinite linear normal none;
+}
+
+@keyframes cubic {
+  from {
+    transform: translateX(50px) translateY(50px) rotate3d(2, 2, 2, (0deg));
+  }
+
+  to {
+    transform: translateX(50px) translateY(50px) rotate3d(2, 2, 2, (360deg));
+
+  }
+}
+
+@mixin animationColor {
+
+
+  animation: color 6000ms infinite linear normal none;
+}
+
+@keyframes color {
+  from {
+    border: 2px solid blue;
+    color: blue;
+
+  }
+
+  to {
+    transform: translateX(50px) translateY(50px) rotate3d(2, 2, 2, (360deg));
 
   }
 }

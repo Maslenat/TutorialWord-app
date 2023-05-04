@@ -1,21 +1,25 @@
 import style from "./table.module.scss";
 import TableRow from "./TableRow";
-import words from "../../words.json"
+import massiv from "../../words.json";
 import Thead from "./Thead";
-import { useState,useContext } from "react";
+import { useState,useContext, useEffect } from "react";
 import { wordContext } from "../Mycontext/Mycontext";
 
-function Table() {
+
+
+function Table(props) {
 const [value, setValue] = useState({});
-const {word,setWord} = useContext(wordContext);
-console.log(word);
-console.log (setWord);
+ const {words} = useContext(wordContext); 
+
+ 
+
+
 
 
     return (
 
         <table className={style.table}>
-            <Thead />
+            <Thead  />
             <tbody>
                 {words.map((word) => (<TableRow setValue={setValue} word={word} key={word.id} />))}
             </tbody>

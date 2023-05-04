@@ -1,17 +1,19 @@
 
 import style from "./style.module.scss";
+import error from '../../img/404.svg';
 
 
 
 
-
-const PageError = () => (
+function PageError () {
+    return(
     <div className={style.wrapper}>
-        <p>404</p>
-        <p>страница не найдена  </p>
+
+        <img src={error} alt="" />
+        <p>страница не найдена </p>
 
 
     </div>
 );
-
+    }
 export default PageError;
