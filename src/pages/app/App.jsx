@@ -1,7 +1,7 @@
 
 import style from "./app.module.scss";
 import Header from "../../components/Header/Header";
-import { React, useEffect } from "react";
+import { React } from "react";
 import {
   BrowserRouter as Router,
   Routes,

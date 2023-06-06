@@ -5,7 +5,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons'; */
 import style from "./buttongame.module.scss";
-
+import { React } from "react";
 import arrowR from "../../img/arrowR.svg";
 import arrowL from "../../img/arrowL.svg";
 /* 

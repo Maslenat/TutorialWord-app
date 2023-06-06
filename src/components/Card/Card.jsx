@@ -3,7 +3,7 @@ import style from "./card.module.scss";
 
 import "./card.module.scss";
 import { useRef,useEffect } from "react";
-
+import { React } from "react";
 const Card = ({word, change, setChange,Counter,anime}) => {
 
     function onChan() {

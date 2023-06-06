@@ -1,4 +1,4 @@
-
+import { React } from "react";
 import style from "./style.module.scss";
 import error from '../../img/404.svg';
 

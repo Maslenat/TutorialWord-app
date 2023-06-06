@@ -6,7 +6,7 @@ import { isEmpty,checkValid} from "../../js/toolsforword";
 import { useContext } from 'react'; 
 import { wordContext } from "../Mycontext/Mycontext";
 import { addPostWords } from "../../Services/POST";
-
+import { React } from "react";
 export default function Addword() {
   const [ input, setInput] = useState({english:"", transcription:"", russian:"", tags:"",id:""});
   const {words,setWords}=useContext(wordContext);

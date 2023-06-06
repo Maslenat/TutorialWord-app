@@ -1,7 +1,7 @@
 import Addword from "../../components/AddWord/Addword"
 import Table from "../../components/Table/Table"
 import { useEffect } from "react";
-import Loader from "../../components/Loader/Loader";
+import { React } from "react";
 export default function PageTutorial() {
     useEffect(()=>{
         global.addEventListener('unload', (e) => {let cords = ['scrollX','scrollY']; cords.forEach(cord => localStorage[cord] = window[cord])});

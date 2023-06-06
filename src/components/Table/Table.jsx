@@ -4,7 +4,7 @@ import massiv from "../../words.json";
 import Thead from "./Thead";
 import { useState,useContext, useEffect } from "react";
 import { wordContext } from "../Mycontext/Mycontext";
-
+import { React } from "react";
 
 
 function Table(props) {

@@ -1,6 +1,6 @@
 import style from "./header.module.scss";
 import logo from '../../img/Logo.svg';
-
+import { React } from "react";
 import {
 
     NavLink

@@ -1,7 +1,7 @@
 import { createContext,useState,useEffect } from "react";
 import { getWords } from "../../Services/GET";
 import Loader from "../Loader/Loader";
-
+import { React } from "react";
 
 export const wordContext=createContext();
 

@@ -9,7 +9,7 @@ import style from "./button.module.scss";
 import { wordContext } from "../Mycontext/Mycontext";
 import { useContext, useEffect } from 'react'; 
 import { delWords } from '../../Services/POST';
-
+import { React } from "react";
 
 const edit = <FontAwesomeIcon icon={faPencil} />;
 const save = <FontAwesomeIcon icon={faCheck} />;

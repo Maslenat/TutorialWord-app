@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { wordContext } from "../Mycontext/Mycontext";
 import {changeWord, isEmpty,checkValid} from "../../js/toolsforword";
 import { updateWords } from "../../Services/POST";
-
+import { React } from "react";
 function TableRow(props) {
     const {words, setWords}=useContext(wordContext);
     const { english, transcription , russian, tags, id } = props.word;
